@@ -1,0 +1,18 @@
+# Sistem operasi & editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+
+# Node (jika nanti dipakai)
+node_modules/
+npm-debug.log*
+
+# Pengaturan lokal Claude Code
+.claude/settings.local.json
+
+# Rahasia (jangan pernah di-commit)
+.env
+.env.*

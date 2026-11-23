@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Papan kampanye | Campus Partner Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body data-page="dashboard" data-access="approved">
+  <a class="skip-link" href="#main">Lewati ke konten</a>
+  <header id="app-nav"></header>
+
+  <!-- 3.2 Dashboard: papan kampanye -->
+  <main id="main" class="container py-4 py-lg-5">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 mb-4">
+      <div>
+        <h1 class="page-title mb-2">Papan kampanye</h1>
+        <p class="lede">Halo, <span id="greet-name">Anonim</span>. Pilih catatan yang cocok, atau pasang kebutuhan Anda sendiri.</p>
+      </div>
+      <div class="d-flex flex-wrap gap-2">
+        <a href="campaign-new.html" class="btn btn-primary" id="pin-btn"></a>
+        <a href="search.html" class="btn btn-outline-primary" id="search-btn"></a>
+      </div>
+    </div>
+
+    <div class="tabs mb-2" role="group" aria-label="Saring kampanye">
+      <input type="radio" class="btn-check" name="camp-filter" id="filter-all" value="all" checked>
+      <label class="tab" for="filter-all">Semua</label>
+      <input type="radio" class="btn-check" name="camp-filter" id="filter-active" value="active">
+      <label class="tab" for="filter-active">Masih aktif</label>
+      <input type="radio" class="btn-check" name="camp-filter" id="filter-mine" value="mine">
+      <label class="tab" for="filter-mine">Kampanye saya</label>
+    </div>
+
+    <div id="campaign-alert"></div>
+    <section aria-labelledby="board-title">
+      <h2 id="board-title" class="visually-hidden">Catatan kampanye</h2>
+      <div id="campaign-list" class="board" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/pages/dashboard.js"></script>
+</body>
+</html>

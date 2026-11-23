@@ -1,0 +1,7 @@
+# Akhir baris seragam (LF) di repo, apa pun sistem operasi kolaborator.
+* text=auto eol=lf
+
+# Berkas biner
+*.png binary
+*.jpg binary
+*.pdf binary

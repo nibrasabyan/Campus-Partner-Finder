@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cari partner | Campus Partner Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body data-page="search" data-access="approved">
+  <a class="skip-link" href="#main">Lewati ke konten</a>
+  <header id="app-nav"></header>
+
+  <!-- 5.2 Filter Pencarian (panel kiri / bottom sheet) + 5.3 Hasil Pencarian -->
+  <main id="main" class="container py-4 py-lg-5">
+    <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-end gap-3 mb-4">
+      <div>
+        <h1 class="page-title mb-2">Cari partner</h1>
+        <p class="lede">Saring profil anonim mahasiswa UB, lalu kirim Connect ke yang cocok.</p>
+      </div>
+      <button type="button" class="btn btn-outline-primary d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#filter-panel" aria-controls="filter-panel" id="open-filter"></button>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-12 col-lg-4 col-xl-3">
+        <div class="offcanvas-lg offcanvas-bottom filter-panel" tabindex="-1" id="filter-panel" aria-labelledby="filter-title">
+          <div class="offcanvas-header">
+            <h2 class="offcanvas-title" id="filter-title">Filter</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#filter-panel" aria-label="Tutup filter"></button>
+          </div>
+          <div class="offcanvas-body">
+            <form id="filter-form" class="filter-box w-100" novalidate>
+              <h2 class="section-title mb-3 d-none d-lg-block">Filter</h2>
+              <div class="mb-3">
+                <label for="f-kategori" class="form-label">Kategori</label>
+                <select class="form-select" id="f-kategori"></select>
+              </div>
+              <div class="mb-3">
+                <label for="f-fakultas" class="form-label">Fakultas</label>
+                <select class="form-select" id="f-fakultas"></select>
+              </div>
+              <fieldset class="mb-4">
+                <legend class="form-legend fs-6">Gender partner</legend>
+                <div id="f-gender"></div>
+              </fieldset>
+              <button type="submit" class="btn btn-primary w-100">Cari</button>
+              <button type="reset" class="btn btn-link w-100 mt-1" id="reset-btn">Atur ulang filter</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <section class="col-12 col-lg-8 col-xl-9" aria-labelledby="result-title">
+        <div class="d-flex justify-content-between align-items-baseline gap-3 mb-3">
+          <h2 id="result-title" class="section-title">Hasil</h2>
+          <span class="small-text muted" id="result-count" aria-live="polite"></span>
+        </div>
+        <div id="search-alert"></div>
+        <div id="result-list" class="row g-3"></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/pages/search.js"></script>
+</body>
+</html>
